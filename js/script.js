@@ -3,12 +3,23 @@ const logoLinks = document.querySelector(".logo-nama");
 const sections = document.querySelectorAll("section");
 const menuIcon = document.querySelector("#menu-icon");
 const navbar = document.querySelector("header nav");
+const loader = document.getElementById("preloader");
 
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+  document.querySelector(".logo-nama").classList.add("popup");
+  // preloader.classList.add("hidden");
+});
+
+// window.addEventListener("load", () => {
+//   const preloader = document.getElementById("preloader");
+//   preloader.classList.add("hidden"); // Tambahkan class untuk menyembunyikan preloader
+// });
 
 menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
-})
+});
 
 const activePage = () => {
   const header = document.querySelector("header");
@@ -49,7 +60,7 @@ logoLinks.addEventListener("click", () => {
     activePage();
     navLinks[0].classList.add("active");
 
-    setTimeout(() => { 
+    setTimeout(() => {
       sections[0].classList.add("active");
     });
   }
