@@ -16,6 +16,7 @@ window.addEventListener("load", function () {
 //   preloader.classList.add("hidden"); // Tambahkan class untuk menyembunyikan preloader
 // });
 
+//toggle menu untuk mobile
 menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
@@ -130,3 +131,18 @@ arrowLeft.addEventListener("click", () => {
   }
   activePortfolio();
 });
+
+document
+  .querySelectorAll(".services-box .icon .bx-arrow-back")
+  .forEach((arrow) => {
+    arrow.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      activePage(); // Reset halaman
+      navLinks[4].classList.add("active"); // Tambahkan class "active" ke "Contact"
+
+      setTimeout(() => {
+        sections[4].classList.add("active"); // Tampilkan section "Contact"
+      });
+    });
+  });

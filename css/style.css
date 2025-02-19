@@ -192,7 +192,7 @@ section.active {
   margin-left: 2rem;
 }
 
-.home-detail .btn-sci .sci a {
+.home-detail .btn-sci .sci a, .home-detail .btn-sci .sci button {
   display: inline-flex;
   padding: 0.8rem;
   border: 0.2rem solid var(--main-color);
@@ -203,7 +203,7 @@ section.active {
   transition: 0.3s;
 }
 
-.home-detail .btn-sci .sci a:hover {
+.home-detail .btn-sci .sci a:hover, .home-detail .btn-sci .sci button:hover {
   background: var(--main-color);
   color: var(--bg-color);
   box-shadow: 0 0 1rem var(--main-color);
