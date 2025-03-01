@@ -146,3 +146,35 @@ document
       });
     });
   });
+
+// menangani pengiriman form contact
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        status.innerHTML = "✅ Message sent successfully!";
+        status.style.color = "green";
+        form.reset();
+      } else {
+        status.innerHTML = "❌ Error sending message. Please try again.";
+        status.style.color = "red";
+      }
+    } catch (error) {
+      status.innerHTML = "❌ Network error. Please check your connection.";
+      status.style.color = "red";
+    }
+  });
+});

@@ -14,6 +14,7 @@
   --bg-color: #1f242d;
   --second-color: #323946;
   --main-color: #7cf03d;
+  /* --main-color: #cf59e6; */
   --white-color: #ffff;
   --disabled-color: #fff3;
   --color-light-purple: #cf59e6;
@@ -192,7 +193,8 @@ section.active {
   margin-left: 2rem;
 }
 
-.home-detail .btn-sci .sci a, .home-detail .btn-sci .sci button {
+.home-detail .btn-sci .sci a,
+.home-detail .btn-sci .sci button {
   display: inline-flex;
   padding: 0.8rem;
   border: 0.2rem solid var(--main-color);
@@ -203,7 +205,8 @@ section.active {
   transition: 0.3s;
 }
 
-.home-detail .btn-sci .sci a:hover, .home-detail .btn-sci .sci button:hover {
+.home-detail .btn-sci .sci a:hover,
+.home-detail .btn-sci .sci button:hover {
   background: var(--main-color);
   color: var(--bg-color);
   box-shadow: 0 0 1rem var(--main-color);
@@ -660,6 +663,15 @@ article,
   font-size: 1.8rem;
 }
 
+/* efek parralax */
+.tilt-box {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d; /* Efek 3D */
+  transform: perspective(1000px);
+}
+
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -887,6 +899,12 @@ article,
   cursor: pointer;
 }
 
+#form-status {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /* resposive */
 @media screen and (max-width: 1200px) {
   html {
@@ -895,6 +913,35 @@ article,
 }
 
 @media screen and (max-width: 992px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 9rem;
+  }
+
+  .home-img {
+    order: -1;
+  }
+
+  .home-img .img-box {
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .home-detail {
+    width: 100%;
+    text-align: center;
+  }
+
   header {
     padding: 2rem 4%;
   }
@@ -960,38 +1007,367 @@ article,
   }
 }
 
-@media screen and (max-width: 600px) {
-  .home-img .img-box {
-    width: 30rem;
-    height: 30rem;
+/* @media screen and (max-width: 600px) {
+  html {
+    font-size: 55%;
   }
+
+  header {
+    padding: 1.5rem 4%;
+  }
+
+  section {
+    padding: 8rem 4% 2rem;
+    min-height: unset;
+    height: auto;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .home-img .img-box {
+    width: 25rem;
+    height: 25rem;
+  }
+
   .home-detail {
     width: 100%;
+    text-align: center;
   }
-  .home-detail h1 {
+
+  .home-detail #myName,
+  .home-detail #myWork {
+    font-size: 2.5rem;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-detail #myName p,
+  .home-detail #myWork p {
+    font-size: 3.5rem;
+    margin: 0.2rem;
+  }
+
+  .home-detail p {
+    font-size: 1.3rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .home-detail .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.3rem;
+  }
+
+  .home-detail .btn-sci {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .home-detail .btn-sci .sci {
+    margin-left: 0;
+  }
+
+  .contact-box .field-box {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-box .portfolio-carousel {
+    height: 30rem;
+  }
+
+  .heading {
     font-size: 3.5rem;
   }
-  .home-detail h2 {
-    font-size: 3rem;
+}
+
+@media screen and (max-height: 450px) {
+  section {
+    padding: 6rem 4% 1rem;
   }
-  .home-detail p {
-    font-size: 1.4rem;
+
+  .home {
+    gap: 2rem;
   }
-  .home-detail .btn {
-    font-size: 1.4rem;
+
+  .home-img .img-box {
+    width: 20rem;
+    height: 20rem;
   }
-  /* #myName {
-    height: 100px;
+
+  .resume-list {
+    height: auto;
+  }
+
+  .portfolio-box .portfolio-carousel {
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    padding: 1rem 4%;
+  }
+
+  section {
+    padding: 6rem 4% 1rem;
+    height: auto;
+  }
+
+  .logo-nama {
+    font-size: 2.5rem;
+  }
+
+  #menu-icon {
     font-size: 3.5rem;
   }
 
-  #myName,
-  #myWork {
-    font-size: 5.5rem;
-  } */
+  nav a {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .home-img .img-box {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .home-detail {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-detail #myName,
+  .home-detail #myWork {
+    font-size: 2rem;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
   .home-detail #myName p,
   .home-detail #myWork p {
+    font-size: 3rem;
+    margin: 0.1rem;
+  }
+
+  .home-detail p {
+    font-size: 1.2rem;
+    margin: 0.8rem 0 1rem;
+  }
+
+  .home-detail .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .home-detail .btn-sci {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .home-detail .btn-sci .sci a,
+  .home-detail .btn-sci .sci button {
+    padding: 0.6rem;
+    font-size: 1.8rem;
+    margin: 0 0.5rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .services-box h3 {
+    font-size: 2.5rem;
+  }
+
+  .services-box p {
+    font-size: 1.4rem;
+  }
+
+  .resume-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .resume-box h2 {
+    font-size: 3.5rem;
+  }
+
+  .resume-box p {
+    font-size: 1.4rem;
+  }
+
+  .resume-list {
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .resume-item {
+    padding: 2rem 1.5rem;
+  }
+
+  .resume-item h3 {
+    font-size: 2rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-box h3 {
+    font-size: 3rem;
+  }
+
+  .portfolio-box p {
+    font-size: 1.4rem;
+  }
+
+  .portfolio-box .portfolio-carousel {
+    height: 25rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box h2 {
+    font-size: 3.5rem;
+  }
+
+  .contact-box p {
+    font-size: 1.4rem;
+  }
+
+  .contact-box .field-box input,
+  .contact-box .field-box textarea {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .contact-box .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+} */
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 1.5rem 4%;
+  }
+
+  section {
+    padding: 8rem 4% 2rem;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .home-img .img-box {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .home-detail {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .home-detail #myName,
+  .home-detail #myWork {
+    font-size: 2.5rem;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-detail #myName p,
+  .home-detail #myWork p {
+    margin: 0.2rem;
     font-size: 5rem;
+  }
+
+  .home-detail p {
+    font-size: 1.3rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .home-detail .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.3rem;
+  }
+
+  .home-detail .btn-sci {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .home-detail .btn-sci .sci {
+    margin-left: 0;
+  }
+
+  .contact-box .field-box {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-box .portfolio-carousel {
+    height: 30rem;
+  }
+
+  .heading {
+    font-size: 3.5rem;
+  }
+  .home-detail #myName {
+    line-height: 1.1;
+  }
+  .home-detail #myWork {
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    white-space: normal;
   }
   .contact-box .field-box {
     grid-template-columns: 1fr;

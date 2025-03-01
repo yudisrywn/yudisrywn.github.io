@@ -15,6 +15,7 @@
       rel="stylesheet" />
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -23,11 +24,11 @@
     <noscript>Allow Javascript</noscript>
     <!-- header -->
     <header>
-      <a href="#" class="logo-nama">Yudi.</a>
+      <a href="#" class="logo-nama" data-aos="fade-right">Yudi.</a>
 
       <i class="bx bx-menu" id="menu-icon"></i>
 
-      <nav>
+      <nav data-aos="fade-left">
         <a href="#home" class="active">Home</a>
         <a href="#services">Services</a>
         <a href="#resume">Resume</a>
@@ -42,7 +43,7 @@
     <!-- home section -->
     <section class="home active">
       <div class="home-detail">
-        <article id="myName" data-aos="fade-up" data-aos-delay="200">
+        <article id="myName" data-aos="fade-right">
           <p class="hello">Y</p>
           <p class="hello">u</p>
           <p class="hello">d</p>
@@ -58,7 +59,7 @@
           <p class="hello">n</p>
           <p class="hello">.</p>
         </article>
-        <article id="myWork" data-aos="fade-up" data-aos-delay="400">
+        <article id="myWork" data-aos="fade-right">
           <div>
             <p class="hello">I</p>
           </div>
@@ -127,7 +128,7 @@
             A freelance web developer who is ready to help you build a professional, responsive, and fast website. With expertise in HTML, CSS, JavaScript, I can build a website from scratch, fix bugs, and develop new features according to your needs. 🚀
           </p>
         </div>
-        <div class="services-box">
+        <!-- <div class="services-box">
           <div class="icon">
             <i class="bx bx-code-alt"></i>
             <a href="#contact"><i class="bx bx-arrow-back"></i></a>
@@ -139,7 +140,7 @@
             Architecto, id necessitatibus quod obcaecati odit in voluptate
             nesciunt ab! Nobis, voluptas iure.
           </p>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- resume section -->
@@ -247,35 +248,35 @@
               I have a strong foundation in back-end development and am constantly learning new technologies to improve my skills. Here are some of the technologies I have mastered.
             </p>
             <div class="resume-list">
-              <div class="resume-item">
+              <div class="resume-item tilt-box" data-tilt data-tilt-scale="1.1">
                 <i class="bx bxl-html5"></i>
                 <span>HTML</span>
               </div>
-              <div class="resume-item">
+              <div class="resume-item tilt-box" data-tilt data-tilt-scale="1.1">
                 <i class="bx bxl-css3"></i>
                 <span>CSS</span>
               </div>
-              <div class="resume-item">
+              <div class="resume-item tilt-box" data-tilt data-tilt-scale="1.1">
                 <i class="bx bxl-bootstrap"></i>
                 <span>Bootstrap</span>
               </div>
-              <div class="resume-item">
+              <div class="resume-item tilt-box" data-tilt data-tilt-scale="1.1">
                 <i class="bx bxl-javascript"></i>
                 <span>JavaScript</span>
               </div>
-              <div class="resume-item">
+              <div class="resume-item tilt-box" data-tilt data-tilt-scale="1.1">
                 <i class="bx bxl-python"></i>
                 <span>Python</span>
               </div>
-              <div class="resume-item">
+              <div class="resume-item tilt-box" data-tilt data-tilt-scale="1.1">
                 <i class="bx bxl-nodejs"></i>
                 <span>Node JS</span>
               </div>
-              <div class="resume-item">
+              <div class="resume-item tilt-box" data-tilt data-tilt-scale="1.1">
                 <i class="bx bxl-figma"></i>
                 <span>Figma</span>
               </div>
-              <div class="resume-item">
+              <div class="resume-item tilt-box" data-tilt data-tilt-scale="1.1">
                 <i class='bx bxs-data'></i>
                 <span>MySQL</span>
               </div>
@@ -314,13 +315,13 @@
       <div class="portfolio-detail active">
         <p class="number">01</p>
         <h3>RA Rodhatul Huda</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorem!</p>
+        <p>Create admin dashboards and forms to increase the effectiveness of student registration.</p>
         <div class="tech">
-          <p>HTML, CSS, JavaScript, PHP</p>
+          <p>HTML, CSS, JavaScript, PHP, Bootstrap</p>
         </div>
         <div class="live-github">
           <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
-          <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+          <a href="https://github.com/yudisrywn/rodhatulHuda"><i class="bx bxl-github"></i><span>Github Repository</span></a>
         </div>
       </div>
       
@@ -332,21 +333,8 @@
           <div class="img-item">
             <img src="src/images/portfolio1.jpg" alt="" srcset="">
           </div>
-          <div class="img-item">
-            <img src="src/images/portfolio2.jpg" alt="" srcset="">
-          </div>
-          <div class="img-item">
-            <img src="src/images/portfolio3.jpg" alt="" srcset="">
-          </div>
-          <div class="img-item">
-            <img src="src/images/portfolio4.jpg" alt="" srcset="">
-          </div>
-          <div class="img-item">
-            <img src="src/images/portfolio1.jpg" alt="" srcset="">
-          </div>
         </div>
       </div>
-
       <div class="navigation-img">
         <button class="arrow-left disable"><i class="bx bx-chevron-left"></i></button>
         <button class="arrow-right"><i class="bx bx-chevron-right"></i></button>
@@ -354,7 +342,7 @@
   </div>
 </section>
     <!-- contact section -->
-     <section class="contact" id="contact">
+    <section class="contact" id="contact">
       <div class="contact-container">
         <div class="contact-box">
           <h2>Let's Work Together</h2>
@@ -385,23 +373,32 @@
         </div>
 
         <div class="contact-box">
-          <form action="">
+          <form action="https://formspree.io/f/xbldnoed" method="post">
             <h2 class="heading">Contact <span>Me!</span></h2>
             <div class="field-box">
-              <input type="text" placeholder="Full Name" required/>
-              <input type="email" placeholder="Email Address" required/>
+              <input type="text" name="name" placeholder="Full Name" required/>
+              <input type="email" name="email" placeholder="Email Address" required/>
               <input type="text" placeholder="Phone Number" required/>
-              <input type="text" placeholder="Email Subject" required/>
-              <textarea name="" id="" placeholder="Your Message" required></textarea>
+              <input type="text" placeholder="Subject" required/>
+              <textarea name="message" id="" placeholder="Your Message" required></textarea>
             </div>
-            <button class="btn">Send Message</button>
+            <button class="btn" type="submit">Send Message</button>
+            <p id="form-status"></p> <!-- Menampilkan status form -->
           </form>
         </div>
       </div>
-     </section>
+    </section>
 
     <!-- custom js -->
-     <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+    VanillaTilt.init(document.querySelector(".tilt-box"), {
+            max: 25,      
+            speed: 400,   
+            glare: true,  
+            "max-glare": 0.5, 
+            scale: 1.1,   
+        });
     function openURL() {
       var url = "src/pdf/Yudi Suryawan Resume.pdf";
 
@@ -410,5 +407,7 @@
   </script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
   </body>
 </html>
